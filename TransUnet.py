@@ -133,19 +133,6 @@ class ConvBlock(nn.Module):
         return x
 
 
-class Upsampler(nn.Module):
-    def __init__(self, in_channels, out_channels, kernel_size):
-        super(Upsampler, self).__init__()
-        self.up = nn.Sequential(
-            Upsample(),
-            ConvBlock(in_channels, out_channels, kernel_size)
-        )
-
-    def forward(self, x):
-        x = self.up(x)
-        return x
-
-
 class ConvLayer(nn.Module):
     def __init__(self, conv_num, in_channels, out_channels, kernel_size):
         super(ConvLayer, self).__init__()
