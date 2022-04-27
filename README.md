@@ -1,6 +1,10 @@
 # TransUNet
 This repo holds code for [TransUNet: Transformers Make Strong Encoders for Medical Image Segmentation](https://arxiv.org/pdf/2102.04306.pdf) 
  - only support 3D inputs.
+ - Run it by inputing command: 
+ ```shell
+ python3 train.py --path config_path --action train
+ ```
 
 
 ## Reference
