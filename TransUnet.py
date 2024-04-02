@@ -85,7 +85,7 @@ class TransformerBlock(nn.Module):
         super(TransformerBlock, self).__init__()
         self.att_norm = LayerNorm(configs['hidden_dim'], eps=1e-6)
         self.attention = AttentionBlock(configs['hidden_dim'], configs['head_num'])
-        self.mlp = MLP(configs['hidden_ch'], configs['mlp_din'], configs['mlp_dprate'])
+        self.mlp = MLP(configs['hidden_dim'], configs['mlp_din'], configs['mlp_dprate'])
         self.fn_norm = LayerNorm(configs['hidden_dim'], eps=1e-6)
 
     def forward(self, x):
